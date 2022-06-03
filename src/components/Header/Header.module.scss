@@ -1,0 +1,41 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+.container{
+    // size
+    width: 100%;
+    height: toRem(140);
+    // flex
+    display: flex;
+    justify-content: space-between;
+    .logo{
+        // size
+        height: 100%;
+        margin-left: 2.5%;
+        // pointer
+        cursor: pointer;
+    }
+    .nav{
+        // size
+        height: 100%;
+        width: 15%;
+        margin-right: 4%;
+        // flex
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // text
+        font-size: toRem(20);
+        color: black;
+        .navText{
+            transition: all 0.1s;
+            font-weight: 400;
+            &:hover{
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+    }
+}
