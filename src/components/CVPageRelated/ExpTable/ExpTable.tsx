@@ -17,6 +17,13 @@ function ExpTable() {
   const keywords = [
     '겸손함', '성실', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'
   ];
+
+  // update keyword
+  const [keyword, setKeyword] = useState<string>('활동에서 보여준 강점 키워드');
+  const updateKeyword = (word: string) => {
+    toggleDrop();
+    setKeyword(word);
+  }
   
   return (
     <>
@@ -26,13 +33,20 @@ function ExpTable() {
           useDrop &&
           <div className={styles.listBox}>
             {
-              keywords.map((word) => <p className={styles.keyword}>{word}</p>)
+              keywords.map((word) => 
+                <p 
+                  className={styles.keyword}
+                  onClick={() => updateKeyword(word)}
+                >
+                {word}
+                </p>
+              )
             }
           </div>
         }
         <div className={styles.expName}>
           <input className={styles.input} type="text" placeholder='활동명'/>
-          <p className={styles.dropdown} onClick={toggleDrop}>활동에서 보여준 강점 키워드 {useDrop? '▲' : '▼'}</p>
+          <p className={styles.dropdown} onClick={toggleDrop}>{keyword}{useDrop? '▲' : '▼'}</p>
         </div>
         <div className={styles.expInfo}>
           <p className={styles.label}>활동 개요</p>
