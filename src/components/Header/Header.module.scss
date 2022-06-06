@@ -6,35 +6,48 @@
 .container{
     // size
     width: 100%;
-    height: toRem(140);
+    height: 10.65%;
+    // border
+    border-bottom: #E5E5E5 solid;
     // flex
     display: flex;
-    justify-content: space-between;
-    .logo{
+    align-items: center;
+    .wrapper{
         // size
+        width: 64.583%;
         height: 100%;
-        margin-left: 2.5%;
-        // pointer
-        cursor: pointer;
-    }
-    .nav{
-        // size
-        height: 100%;
-        width: 15%;
-        margin-right: 4%;
+        margin: 0 auto;
         // flex
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // text
-        font-size: toRem(20);
-        color: black;
-        .navText{
-            transition: all 0.1s;
-            font-weight: 400;
-            &:hover{
-                font-weight: 700;
-                cursor: pointer;
+        .logo{
+            // margin
+            height: 45.22%;
+            // pointer
+            cursor: pointer;
+        }
+        .nav{
+            // text
+            font-size: toRem(24);
+            color: black;
+            // flex
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .navText{
+                // font
+                transition: all 0.1s;
+                font-weight: 400;
+                // margin
+                margin : 0;
+                &:first-child{
+                    margin-right: toRem(93);
+                }
+                &:hover{
+                    font-weight: 700;
+                    cursor: pointer;
+                }
             }
         }
     }

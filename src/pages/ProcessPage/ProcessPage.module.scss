@@ -1,0 +1,33 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+.page{
+    // full-size
+    width: 100vw;
+
+    .wrapper{
+        border: 1px solid peru;
+        // size
+        width: 92%;
+        margin: 0 auto;
+        .title{
+            // font
+            font-size: toRem(20);
+            font-weight: 700;
+            // size
+            margin: 0;
+            margin-bottom: 4%;
+        }
+        .progress{
+            display: flex;
+            .company{
+                border: 3px solid green;
+            }
+            .bar{
+                border: 3px solid blue;
+            }
+        }
+    }
+}

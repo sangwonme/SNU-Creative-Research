@@ -1,0 +1,46 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+.container{
+    // flex
+    display: flex;
+    flex-direction: column;
+    .dates{
+        display: flex;
+        .date{
+
+        }
+    }
+    .circles{
+        // flex
+        display: flex;
+        justify-content: space-between;
+        .bar{
+
+        }
+        .circle{
+            // size 
+            width: toRem(60);
+            height: toRem(60);
+            border-radius: 50%;
+            // color
+            background-color: #3E88F2;
+            // flex
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .check{
+                // size
+                width: 50%;
+            }
+        }
+    }
+    .processes{
+        display: flex;
+        .process{
+            
+        }
+    }
+}

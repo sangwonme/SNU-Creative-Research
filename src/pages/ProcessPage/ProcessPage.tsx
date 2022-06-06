@@ -7,18 +7,22 @@ import Header from '../../components/Header/Header';
 
 function ProcessPage() {
   return (
-    <>
+    <div className={styles.page}>
       <Header/>
       <div className={styles.wrapper}>
         <p className={styles.title}>일정 관리</p>
 
         <div className={styles.progress}>
-          <CompanyLogo name={'차트메트릭'} logo={logo1}/>
-          <ProgressBar level={3}/>
+          <div className={styles.company}>
+            <CompanyLogo name={'차트메트릭'} logo={logo1}/>
+          </div>
+          <div className={styles.bar}>
+            <ProgressBar level={3}/>
+          </div>
         </div>
 
       </div>
-    </>
+    </div>
   );
 }
 

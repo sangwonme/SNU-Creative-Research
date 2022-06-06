@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styles from './Header.module.scss'
-import logo from '../../assets/jobda_logo.png'
+import logo from '../../assets/jobda_logo.svg'
 
 import useHover from '../../customHooks/useHover';
 import PopUpNav from '../PopUpNav/PopUpNav';
@@ -12,10 +12,12 @@ function Header() {
 	return (
 	<>
     <div className={styles.container}>
-      <img className={styles.logo} src={logo} alt="" />
-      <div className={styles.nav}>
-        <p className={styles.navText}>채용공고</p>
-        <p className={styles.navText} ref={hoverRef}>마이페이지</p>
+      <div className={styles.wrapper}>
+        <img className={styles.logo} src={logo} alt="" />
+        <div className={styles.nav}>
+          <p className={styles.navText}>채용공고</p>
+          <p className={styles.navText} ref={hoverRef}>마이페이지</p>
+        </div>
       </div>
     </div>
     { isHovered && <PopUpNav/> }
