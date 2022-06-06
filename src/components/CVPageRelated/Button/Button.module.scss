@@ -3,13 +3,15 @@
     @return $remValue;
 }
 
+$factor: 0.8;
+
 .box{
     transition: all 0.05s;
     // size
-    width: toRem(200);
-    height: toRem(64);
+    width: toRem($factor*200);
+    height: toRem($factor*64);
     // style
-    border-radius: toRem(24);
+    border-radius: toRem($factor*24);
     background-color: #5696F4;
     // flex
     display: flex;
@@ -21,7 +23,7 @@
     }
     .text{
         // font
-        font-size: toRem(24);
+        font-size: toRem($factor*24);
         font-weight: 600;
         color: white;
     }

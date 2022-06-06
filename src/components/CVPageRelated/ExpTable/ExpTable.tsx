@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import styles from './ExpTable.module.scss';
 
 function ExpTable() {
@@ -8,14 +9,30 @@ function ExpTable() {
   ];
   const defaultOption = options[0];
 
-
+  // keyword
+  const [useDrop, setUseDrop] = useState<boolean>(false);
+  const toggleDrop = () => {
+    setUseDrop(!useDrop);
+  }
+  const keywords = [
+    '겸손함', '성실', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'
+  ];
+  
   return (
     <>
     <div className={styles.container}>
       <div className={styles.grid}>
+        {
+          useDrop &&
+          <div className={styles.listBox}>
+            {
+              keywords.map((word) => <p className={styles.keyword}>{word}</p>)
+            }
+          </div>
+        }
         <div className={styles.expName}>
           <input className={styles.input} type="text" placeholder='활동명'/>
-          <p>Dropdownlist</p>
+          <p className={styles.dropdown} onClick={toggleDrop}>활동에서 보여준 강점 키워드 {useDrop? '▲' : '▼'}</p>
         </div>
         <div className={styles.expInfo}>
           <p className={styles.label}>활동 개요</p>
