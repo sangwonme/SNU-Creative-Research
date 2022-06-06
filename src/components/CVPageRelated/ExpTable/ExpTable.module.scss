@@ -1,0 +1,95 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+input{
+    padding-left: toRem(16);
+}
+
+.container{
+    // border
+    border: #D9D9D9 1px solid;
+    border-radius: 8px;
+    // size
+    width: 100%;
+    height: toRem(350);
+    margin: 0;
+    // background
+    background-color: #F8F8F8;
+    .grid{
+        // size
+        width: 100%;
+        height: 100%;
+        // grid
+        display: grid;
+        grid-template-rows: 14.63% 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        .expName{
+            // grid
+            display: grid;
+            grid-template-columns: 68.7% 1fr;
+            .input{
+                // init
+                border: none;
+                border-radius: 8px 0 0 0;
+                background-color: #F8F8F8;
+                // border
+                border-right: #D9D9D9 1px solid;
+                // font
+                font-size: toRem(14);
+                &:focus{
+                    z-index: 2;
+                    background-color: white;
+                    outline: #5696F4 solid;
+                }
+            }
+        }
+        .expInfo{
+            // grid
+            display: grid;
+            grid-template-columns: 15% 1fr;
+            // border
+            border-top:#D9D9D9 1px solid;
+            .label{
+                // font
+                font-size: toRem(14);
+                font-weight: 600;
+                // padding
+                padding-left: toRem(16);
+                // center
+                display: flex;
+                align-items: center;
+            }
+            .input{
+                // init
+                border: none;
+                background-color: #F8F8F8;
+                // border
+                border-left: #D9D9D9 1px solid;
+                // font
+                font-size: toRem(14);
+                &:focus{
+                    z-index: 2;
+                    background-color: white;
+                    outline: #5696F4 solid;
+                }
+            }
+            .lastInput{
+                // init
+                border: none;
+                background-color: #F8F8F8;
+                // border
+                border-left: #D9D9D9 1px solid;
+                border-radius: 0 0 8px 0;
+                // font
+                font-size: toRem(14);
+                &:focus{
+                    z-index: 2;
+                    background-color: white;
+                    outline: #5696F4 solid;
+                }
+            }
+        }
+    }
+}
