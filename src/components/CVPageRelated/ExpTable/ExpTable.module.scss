@@ -3,8 +3,16 @@
     @return $remValue;
 }
 
-input{
-    padding-left: toRem(16);
+.input{
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.01em;
+    padding: 0 toRem(16);
+    padding-top: toRem(8);
+    border-style: none;
+    border-color: Transparent;
+    overflow: auto;
+    outline: none;
+    resize: none;
 }
 
 .container{
@@ -43,6 +51,10 @@ input{
                 border-right: #D9D9D9 1px solid;
                 // font
                 font-size: toRem(14);
+                // center
+                display: flex;
+                align-items: center;
+                padding-top: 0;
                 &:focus{
                     z-index: 2;
                     background-color: white;
@@ -69,9 +81,8 @@ input{
                 font-weight: 600;
                 // padding
                 padding-left: toRem(16);
-                // center
-                display: flex;
-                align-items: center;
+                padding-top: toRem(8);
+                margin: 0;
             }
             .input{
                 // init
