@@ -1,13 +1,15 @@
 import * as React from 'react';
+import { useState } from 'react';
 import styles from './Header.module.scss'
 import logo from '../../assets/jobda_logo.svg'
-
-import useHover from '../../customHooks/useHover';
 import PopUpNav from '../PopUpNav/PopUpNav';
 
 function Header() {
 
-  const [hoverRef, isHovered] = useHover();
+  const [popup, setPopup] = useState<boolean>(false);
+  const togglePopup = () => {
+    setPopup(!popup);
+  }
 
 	return (
 	<>
@@ -16,11 +18,11 @@ function Header() {
         <img className={styles.logo} src={logo} alt="" />
         <div className={styles.nav}>
           <p className={styles.navText}>채용공고</p>
-          <p className={styles.navText} ref={hoverRef}>마이페이지</p>
+          <p className={styles.navText} onClick={togglePopup}>마이페이지</p>
         </div>
+        { popup && <PopUpNav/> }
       </div>
     </div>
-    { isHovered && <PopUpNav/> }
 	</>
 	);
 }

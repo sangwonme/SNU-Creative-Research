@@ -4,20 +4,31 @@
 }
 
 .container{
-    //size
-    width: 100%;
+    // size
+    width: 20%;
+    // pos
     position: absolute;
+    right: 0%;
+    top: 100%;
+    z-index: 99;
     .box{
         // size
-        width: 20%;
-        height: toRem(280);
+        width: 100%;
         // border
-        border: 1px black solid;
+        border: 1px #D9D9D9 solid;
         border-radius: toRem(10);
-
+        // background
+        background-color: white;
         .navlist{
             .navText{
-                font-weight: 400;
+                // font
+                font-size: toRem(16);
+                padding-left: toRem(16);
+                transition: all 0.5s;
+                &:hover{
+                    font-weight: 600;
+                    cursor: pointer;
+                }
             }
         }
     }

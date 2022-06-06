@@ -12,6 +12,7 @@ function ExpCV({title}:Props) {
       <div className={styles.wrapper}>
         <p className={styles.title}>{title}</p>
         <ExpTable/>
+        <ExpTable/>
       </div>
     </div>
   );
