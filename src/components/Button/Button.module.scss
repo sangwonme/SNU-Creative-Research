@@ -1,5 +1,27 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
 .box{
+    transition: all 0.05s;
+    // size
+    width: toRem(200);
+    height: toRem(64);
+    // style
+    border-radius: toRem(24);
+    background-color: #5696F4;
+    // flex
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        background-color: #3282F6 ;
+    }
     .text{
-        
+        // font
+        font-size: toRem(24);
+        font-weight: 600;
+        color: white;
     }
 }

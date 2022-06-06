@@ -1,12 +1,16 @@
 import * as React from 'react';
 import styles from './Button.module.scss';
 
-function Button() {
+interface Props{
+  text: string
+}
+
+function Button({text}: Props) {
   return (
     <>
       <div className={styles.box}>
         <p className={styles.text}>
-
+          {text}
         </p>
       </div>
     </>
