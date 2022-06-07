@@ -6,28 +6,15 @@
 .page{
     // full-size
     width: 100vw;
-
-    .wrapper{
-        border: 1px solid peru;
+    height: 100vh;
+    .main{
         // size
-        width: 92%;
+        width: 64.583%;
         margin: 0 auto;
-        .title{
-            // font
-            font-size: toRem(20);
-            font-weight: 700;
-            // size
-            margin: 0;
-            margin-bottom: 4%;
-        }
-        .progress{
-            display: flex;
-            .company{
-                border: 3px solid green;
-            }
-            .bar{
-                border: 3px solid blue;
-            }
-        }
+        // margin
+        margin-top: 2%;
+        // grid
+        display: grid;
+        grid-template-columns: 32% 1fr;
     }
 }

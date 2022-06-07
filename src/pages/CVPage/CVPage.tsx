@@ -10,14 +10,14 @@ function CVPage() {
   return (
     <div className={styles.page}>
       <Header/>
-      <div className={styles.main}>
-        <SideMenu/>
-        <BasicInfo/>
-      </div>
       {/* <div className={styles.main}>
         <SideMenu/>
-        <ExpCV title='수업활동'/>
+        <BasicInfo/>
       </div> */}
+      <div className={styles.main}>
+        <SideMenu/>
+        <ExpCV title='수업활동'/>
+      </div>
       <Footer buttonText='저장'/>
     </div>
   );

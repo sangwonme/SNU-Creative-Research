@@ -8,7 +8,8 @@ import ProcessPage from './pages/ProcessPage/ProcessPage';
 function App() {
   return (
     <>
-      <CVPage/>
+      {/* <CVPage/> */}
+      <ProcessPage/>
     </>
   );
 }
