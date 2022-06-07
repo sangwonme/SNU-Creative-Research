@@ -1,15 +1,19 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
-import SideMenu from './components/CVPageRelated/SideMenu/SideMenu';
+import {Route, Routes, BrowserRouter as Router} from 'react-router-dom';
 import CVPage from './pages/CVPage/CVPage';
 import ProcessPage from './pages/ProcessPage/ProcessPage';
 
 function App() {
   return (
     <>
-      {/* <CVPage/> */}
-      <ProcessPage/>
+    <Router>
+      <Routes>
+        {/* <Route path='/mycv' element={<MainPage/>} /> */}
+        <Route path='/editcv/:id' element={<CVPage/>} />
+        <Route path='/progress' element={<ProcessPage/>} />
+      </Routes>
+    </Router>
     </>
   );
 }
