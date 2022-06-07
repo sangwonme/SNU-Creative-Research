@@ -1,0 +1,146 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+input{
+    padding-left: toRem(16);
+}
+
+input:focus{
+    z-index: 2;
+    background-color: white;
+    outline: #5696F4 solid;
+}
+
+.container{
+    // size
+    width: 100%;
+    // border
+    border: 1px solid #D9D9D9;
+    border-radius: 16px;
+    .wrapper{
+        // size
+        padding: toRem(20);
+        // center
+        margin: 0 auto;
+        .title{
+            // margin
+            margin-top: 0;
+            margin-bottom: toRem(20);
+            // font
+            font-size: toRem(16);
+            font-weight: 600;
+        }
+        .infowrapper{
+            // size
+            margin: 0 toRem(16);
+            .info{
+                // size
+                width: 100%;
+                .infotitle{
+                    // font
+                    font-size: toRem(14);
+                }
+
+                .firstgrid{
+                    // size
+                    height: toRem(44);
+                    padding: 0;
+                    // style
+                    background-color: #F8F8F8;
+                    border: 1px solid #D9D9D9;
+                    border-radius: 8px;
+                    // grid
+                    display: grid;
+                    grid-template-columns: 24.1% 18.74% 22.22% 1fr;
+                    grid-template-rows: 1fr;
+                    .name{
+                        // init
+                        border: none;
+                        background-color: #F8F8F8;
+                        // border
+                        border-right: #D9D9D9 1px solid;
+                        border-radius: 8px 0 0 8px;
+                    }
+                    .dropdown{
+                        // border
+                        border-right: #D9D9D9 1px solid;
+
+                    }
+                    .age{
+                        // init
+                        border: none;
+                        background-color: #F8F8F8;
+                        // border
+                        border-right: #D9D9D9 1px solid;
+                    }
+                    .phone{
+                        // init
+                        border: none;
+                        background-color: #F8F8F8;
+                        // border
+                        border-right: #D9D9D9 1px solid;
+                        border-radius: 0 8px 8px 0;
+                    }
+                }
+
+                .secondgrid{
+                    // size
+                    height: toRem(44);
+                    padding: 0;
+                    // style
+                    background-color: #F8F8F8;
+                    border: 1px solid #D9D9D9;
+                    border-radius: 8px;
+                    // grid
+                    display: grid;
+                    grid-template-columns: 24.1% 18.74% 1fr 22.22%;
+                    grid-template-rows: 1fr;
+                    .snu{
+                        // size
+                        height: 100%;
+                        margin: 0;
+                        padding-left: toRem(16);
+                        // font
+                        font-size: toRem(13);
+                        font-weight: 600;
+                        display: flex;
+                        align-items: center;
+                        // border
+                        border-right: #D9D9D9 1px solid;
+                    }
+                    .college{
+                        // init
+                        border: none;
+                        background-color: #F8F8F8;
+                        // border
+                        border-right: #D9D9D9 1px solid;
+                    }
+                }
+
+                .box{
+                    // size
+                    height: toRem(44);
+                    padding: 0;
+                    margin-bottom: toRem(12);
+                    // style
+                    background-color: #F8F8F8;
+                    border: 1px solid #D9D9D9;
+                    border-radius: 8px;
+                    .singleInput{
+                        // init
+                        border: none;
+                        background-color: #F8F8F8;
+                        // size
+                        width: 100%;
+                        height:100%;
+                        border-radius: 8px;
+                        box-sizing: border-box;
+                    }
+
+                }
+            }
+        }
+    }
+}
