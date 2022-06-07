@@ -1,4 +1,5 @@
 import * as React from 'react';
+import AddDelBtn from '../AddDelBtn/AddDelBtn';
 import ExpTable from '../ExpTable/ExpTable';
 import styles from './ExpCV.module.scss';
 
@@ -13,6 +14,7 @@ function ExpCV({title}:Props) {
         <p className={styles.title}>{title}</p>
         <ExpTable/>
         <ExpTable/>
+        <AddDelBtn/>
       </div>
     </div>
   );
