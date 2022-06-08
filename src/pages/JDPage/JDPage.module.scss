@@ -1,0 +1,71 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+.page{
+    width: 100vw;
+    height: 100vh;
+    .main{
+        // size
+        width: 64.583%;
+        margin: 0 auto;
+        // margin
+        margin-top: 0;
+        padding-bottom: toRem(72);
+    }
+    .hello{
+        // margin
+        margin-bottom: toRem(36);
+        // font
+        font-size: toRem(28);
+        font-weight: 600;
+        // flex
+        display: flex;
+        .title:first-child{
+            color: #2679F1;
+        }
+    }
+    .thumbnail{
+        width: toRem(706);
+        margin: 0 auto;
+    }
+    .catch{
+        // font
+        font-size: toRem(24);
+        font-weight: 600;
+        // flex
+        display: flex;
+        .phrase{
+            margin: 0;
+            margin-top: toRem(48);
+            margin-bottom: toRem(20);
+        }
+        .phrase:nth-child(2){
+            color: #2679F1;
+        }
+    }
+    .intro{
+        // font
+        font-size: toRem(16);
+        font-family: 'Noto Sans KR', sans-serif;
+        line-height: 1.5;
+        white-space: pre-wrap;
+        // margin
+        margin-top: 0;
+    }
+    .header{
+        // font
+        font-size: toRem(24);
+        font-weight: 600;
+    }
+    .content{
+        // font
+        font-size: toRem(16);
+        font-family: 'Noto Sans KR', sans-serif;
+        line-height: 1.5;
+        white-space: pre-wrap;
+        // margin
+        margin-top: 0;
+    }
+}
