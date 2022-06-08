@@ -1,0 +1,51 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+.container{
+    // size
+    padding: toRem(24);
+    .exp{
+        // size
+        width: fit-content;
+        margin: 0;
+        padding: toRem(12) toRem(12);
+        // style
+        background-color: #ECF4FF;
+        border-radius: 8px;
+        // font
+        font-size: toRem(16);
+        font-weight: 600;
+    }
+    .title{
+        // font
+        font-size: toRem(28);
+        font-weight: 600;
+        // margin
+        margin: 0;
+        margin: toRem(20) 0 ;
+    }
+    .keywords{
+        // flex
+        display: flex;
+        // margin
+        margin-bottom: toRem(16);
+    }
+    .description{
+        // grid
+        display: grid;
+        grid-template-columns: toRem(100) 1fr;
+        margin-bottom: toRem(12);
+        .label{
+            // size
+            width: toRem(100);
+            margin: 0;
+            // font
+            color: #5B5C61;
+        }
+        .text{
+            margin: 0;
+        }
+    }
+}
