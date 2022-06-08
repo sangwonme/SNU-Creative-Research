@@ -4,10 +4,11 @@ import styles from './Button.module.scss';
 
 interface Props{
   text: string,
-  color: string
+  color: string,
+  onClick: any
 }
 
-function Button({text, color}: Props) {
+function Button({text, color, onClick}: Props) {
   // hover
   const [hoverRef, isHovered] = useHover();
 
@@ -16,6 +17,7 @@ function Button({text, color}: Props) {
       <div 
         className={styles.box}
         ref={hoverRef}
+        onClick={onClick}
         style={
           isHovered && color=='#5696F4' ?
           {backgroundColor: '#2679F1'} :

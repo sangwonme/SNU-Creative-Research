@@ -8,9 +8,7 @@ import CompanyList from '../../utils/companyList';
 import styles from './ProcessPage.module.scss';
 
 function ProcessPage() {
-  // step
-  const [step, setStep] = useState<number>(3);
-
+  
   // select
   const [selection, setSelection] = useState<number[]>([]);
   const addSelect = (idx:number) => {
@@ -25,6 +23,15 @@ function ProcessPage() {
   const selectedStyle = {
     outlineColor: '#2679F1',
     outlineWidth: '2px'
+  }
+
+  // step
+  const [step, setStep] = useState<number>(3);
+  const goNextStep = () => {
+    if (step < 4 && selection.length > 0){
+      setStep(step + 1);
+    }
+    console.log(step);
   }
 
   return (
@@ -58,6 +65,7 @@ function ProcessPage() {
       <Footer 
         buttonText='선택 완료' 
         color={selection.length > 0 ? '#5696F4' : '#D9D9D9'}
+        onClick={goNextStep}
       />
     </div>
   );

@@ -25,7 +25,7 @@ function CVPage() {
           <ExpCV title={menus[editId]}/>
         }
       </div>
-      <Footer buttonText='저장' color='#5696F4'/>
+      <Footer buttonText='저장' color='#5696F4' onClick={()=>{}}/>
     </div>
   );
 }
