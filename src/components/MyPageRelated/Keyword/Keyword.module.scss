@@ -1,0 +1,20 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+.box{
+    // size
+    margin: 0;
+    padding: 0;
+    // style
+    border: #D8D8D8 1px solid;
+    background-color: #F8F8F8;
+    .text{
+        // font
+        font-size: toRem(16);
+        color: #2679F1;
+        // size
+        margin: toRem(6) toRem(12);
+    }
+}

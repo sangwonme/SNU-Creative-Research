@@ -12,7 +12,9 @@ function PopUpNav({onClick}: Props) {
       <div className={styles.container} onClick={onClick}>
         <div className={styles.box}>
           <div className={styles.navlist}>
-            <p className={styles.navText}>나의 지원서</p>
+            <Link to={'/'} style={{ textDecoration: 'none', color: 'black'}}>
+              <p className={styles.navText}>나의 지원서</p>
+            </Link>
             <Link to={'/editcv/0'} style={{ textDecoration: 'none', color: 'black'}}>
               <p className={styles.navText}>나의 지원서 관리</p>
             </Link>
