@@ -1,4 +1,5 @@
 import * as React from 'react';
+import useHover from '../../../customHooks/useHover';
 import styles from './Button.module.scss';
 
 interface Props{
@@ -7,11 +8,20 @@ interface Props{
 }
 
 function Button({text, color}: Props) {
-  console.log(color);
+  // hover
+  const [hoverRef, isHovered] = useHover();
 
   return (
     <>
-      <div className={styles.box} style={{backgroundColor: color}}>
+      <div 
+        className={styles.box}
+        ref={hoverRef}
+        style={
+          isHovered && color=='#5696F4' ?
+          {backgroundColor: '#2679F1'} :
+          {backgroundColor: color}
+        }
+      >
         <p className={styles.text}>
           {text}
         </p>

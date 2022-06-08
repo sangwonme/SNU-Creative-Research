@@ -17,10 +17,9 @@ function Company({logo, name, job, link, description}:Props) {
       <img src={logo} alt={name} />
       <div className={styles.text}>
         <div className={styles.title}>
-          <a href={link} style={{ textDecoration: 'none', color: 'black'}}>
-            <p className={styles.company}>{`${name}\u00A0-\u00A0`}</p>
-          </a>
-          <p className={styles.job}>{`${job} 🔗`}</p>
+          <p className={styles.company}>{`${name}\u00A0-\u00A0`}</p>
+          <p className={styles.job}>{`${job}\u00A0`}</p>
+          <a href={link} style={{ textDecoration: 'none', color: 'black'}}>🔗</a>
         </div>
         <div className={styles.description}>
           <p className={styles.recom}> 잡다 추천 이유 : </p>
