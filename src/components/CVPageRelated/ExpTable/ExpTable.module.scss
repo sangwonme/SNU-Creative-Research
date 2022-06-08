@@ -41,7 +41,7 @@
         .expName{
             // grid
             display: grid;
-            grid-template-columns: 67% 1fr;
+            grid-template-columns: 49.49% 32.32% 1fr;
             .input{
                 // init
                 border: none;
@@ -61,12 +61,8 @@
                     outline: #5696F4 solid;
                 }
             }
-            .dropdown{
-                cursor: pointer;
-                // padding
-                padding-left: toRem(16);
-                // font
-                font-size: toRem(14);
+            .dropdown1{
+                border-right: #D9D9D9 1px solid ;
             }
         }
         .expInfo{
@@ -111,33 +107,6 @@
                     z-index: 2;
                     background-color: white;
                     outline: #5696F4 solid;
-                }
-            }
-        }
-        .listBox{
-            // scroll
-            overflow: scroll;
-            // size
-            width: 33%;
-            height: 56.91%;
-            // position
-            position: absolute;
-            right: -1px;
-            top: 14.63%;
-            // border
-            border: #D9D9D9 1px solid;
-            border-radius: 0 0 8px 8px;
-            background-color: white;
-            .keyword{
-                // margin
-                margin: 0;
-                // font
-                font-size: toRem(14);
-                padding: toRem(2) 0;
-                padding-left: toRem(16);
-                &:hover{
-                    background-color: #5696F4;
-                    color: white;
                 }
             }
         }

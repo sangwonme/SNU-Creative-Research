@@ -11,8 +11,11 @@ function ExpTable() {
       <div className={styles.grid}>
         <div className={styles.expName}>
           <input className={styles.input} placeholder='활동명'/>
-          <div className={styles.tmp}>
-            <DropList type={1} placeholder='dkdk'/>
+          <div className={styles.dropdown1}>
+            <DropList type={2} placeholder='활동에서 보여준 스킬 키워드'/>
+          </div>
+          <div className={styles.dropdown2}>
+            <DropList type={1} placeholder='강점 키워드'/>
           </div>
         </div>
         <div className={styles.expInfo}>

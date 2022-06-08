@@ -1,4 +1,5 @@
 import * as React from 'react';
+import DropList from '../../DropList/DropList';
 import styles from './BasicInfo.module.scss';
 
 function BasicInfo() {
@@ -53,10 +54,17 @@ function BasicInfo() {
         <div className={styles.info}>
           <p className={styles.infotitle}>희망 직군</p>
           <div className={styles.forthgrid}>
-
+            <div className={styles.dropdown}>
+              <DropList type={3} placeholder='1순위 희망 직군(필수)'/>
+            </div>
+            <div className={styles.dropdown}>
+              <DropList type={3} placeholder='2순위 희망 직군(선택)'/>
+            </div>
+            <div className={styles.dropdown}>
+              <DropList type={3} placeholder='3순위 희망 직군(선택)'/>
+            </div>
           </div>
         </div>
-
         </div>
       </div>
     </div>

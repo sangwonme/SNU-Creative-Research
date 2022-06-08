@@ -21,6 +21,7 @@
         justify-content: space-between;
         align-items: center;
         .selected{
+            margin: 0;
             padding-left: toRem(16);
             color: #757575;
         }
@@ -36,7 +37,7 @@
         overflow: scroll;
         // size
         width: 100%;
-        height: toRem(120);
+        height: toRem(100);
         // position
         position: absolute;
         right: -1px;
