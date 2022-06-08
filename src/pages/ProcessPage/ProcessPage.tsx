@@ -11,6 +11,22 @@ function ProcessPage() {
   // step
   const [step, setStep] = useState<number>(3);
 
+  // select
+  const [selection, setSelection] = useState<number[]>([]);
+  const addSelect = (idx:number) => {
+    if(selection.includes(idx)){
+      selection.splice(selection.indexOf(idx), 1)
+      setSelection([...selection])
+    }else{
+      setSelection([...selection, idx]);
+    }
+    console.log(selection);
+  }
+  const selectedStyle = {
+    outlineColor: '#2679F1',
+    outlineWidth: '2px'
+  }
+
   return (
     <div className={styles.page}>
       <Header/>
@@ -27,7 +43,11 @@ function ProcessPage() {
             </p>
             {
               CompanyList.map(c => 
-                <div className={styles.companyWrapper}>
+                <div className={styles.companyWrapper} 
+                  key={c.idx} 
+                  onClick={() => addSelect(c.idx)}
+                  style={selection.includes(c.idx) ? selectedStyle : {}}
+                >
                   <Company logo={c.logo} name={c.name} job={c.job} link={c.link} description={c.description}/>
                 </div>
               )
@@ -35,7 +55,10 @@ function ProcessPage() {
           </div>
         </div>
       </div>
-      <Footer buttonText='선택 완료'/>
+      <Footer 
+        buttonText='선택 완료' 
+        color={selection.length > 0 ? '#5696F4' : '#D9D9D9'}
+      />
     </div>
   );
 }

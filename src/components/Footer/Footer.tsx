@@ -3,15 +3,17 @@ import Button from '../CVPageRelated/Button/Button';
 import styles from './Footer.module.scss';
 
 interface Props{
-  buttonText: string
+  buttonText: string,
+  color: string
 }
 
-function Footer({buttonText}: Props) {
+function Footer({buttonText, color}: Props) {
+
   return (
     <>
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <Button text={buttonText}/>
+        <Button text={buttonText} color={color}/>
       </div>
     </div>
     </>

@@ -20,7 +20,7 @@ function Company({logo, name, job, link, description}:Props) {
           <a href={link} style={{ textDecoration: 'none', color: 'black'}}>
             <p className={styles.company}>{`${name}\u00A0-\u00A0`}</p>
           </a>
-          <p className={styles.job}>{job}</p>
+          <p className={styles.job}>{`${job} 🔗`}</p>
         </div>
         <div className={styles.description}>
           <p className={styles.recom}> 잡다 추천 이유 : </p>
