@@ -3,9 +3,11 @@ import { useState } from 'react';
 import styles from './ProgressBar.module.scss';
 import check from '../../../assets/check.png';
 
-function ProgressBar() {
-  // step
-  const [step, setStep] = useState<number>(2);
+interface Props{
+  step: number
+}
+
+function ProgressBar({step}: Props) {
 
   // style
   const greyColor = {

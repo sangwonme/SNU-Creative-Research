@@ -2,10 +2,14 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './PopUpNav.module.scss';
 
-function PopUpNav() {
+interface Props{
+  onClick: ()=>{}
+}
+
+function PopUpNav({onClick}: Props) {
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.container} onClick={onClick}>
         <div className={styles.box}>
           <div className={styles.navlist}>
             <p className={styles.navText}>나의 지원서</p>

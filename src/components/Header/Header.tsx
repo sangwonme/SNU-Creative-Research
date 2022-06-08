@@ -20,7 +20,7 @@ function Header() {
           <p className={styles.navText}>채용공고</p>
           <p className={styles.navText} onClick={togglePopup}>마이페이지</p>
         </div>
-        { popup && <PopUpNav/> }
+        { popup && <PopUpNav onClick={()=>togglePopup}/> }
       </div>
     </div>
 	</>

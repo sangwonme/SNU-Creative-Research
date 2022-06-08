@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '../Button/Button';
+import Button from '../CVPageRelated/Button/Button';
 import styles from './Footer.module.scss';
 
 interface Props{
