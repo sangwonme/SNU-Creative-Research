@@ -37,6 +37,8 @@
         display: grid;
         grid-template-columns: toRem(100) 1fr;
         margin-bottom: toRem(12);
+        // font
+        font-size: toRem(16);
         .label{
             // size
             width: toRem(100);
