@@ -7,6 +7,7 @@ import SideMenu from '../../components/CVPageRelated/SideMenu/SideMenu';
 import styles from './CVPage.module.scss';
 import ExpCV from '../../components/CVPageRelated/ExpCV/ExpCV';
 import BasicInfo from '../../components/CVPageRelated/BasicInfo/BasicInfo';
+import Grade from '../../components/CVPageRelated/Grade/Grade';
 
 function CVPage() {
   // edit id
@@ -23,7 +24,9 @@ function CVPage() {
         {
           editId == 0 ?
           <BasicInfo/> :
-          <ExpCV title={menus[editId]}/>
+          1 <= editId && editId <= 3 ?
+          <ExpCV title={menus[editId]}/> :
+          <Grade/>
         }
       </div>
       <Footer buttonText='저장' color='#5696F4' onClick={()=>{}}/>

@@ -32,6 +32,8 @@ function ExpTable() {
   const onChangeDesc4 = (event:any) => {
     setDesc4(event.target.value);
   }
+  const [keyword1, setKeyword1] = useState<string>(thisExp.keywords[0]);
+  const [keyword2, setKeyword2] = useState<string>(thisExp.keywords[1]);
 
   useEffect(() => {
     setTitle(expList[expId-1].title);
@@ -39,6 +41,8 @@ function ExpTable() {
     setDesc2(expList[expId-1].description[1]);
     setDesc3(expList[expId-1].description[2]);
     setDesc4(expList[expId-1].description[3]);
+    setKeyword1(expList[expId-1].keywords[0]);
+    setKeyword2(expList[expId-1].keywords[1]);
   }, [expId]
   );
 
@@ -49,10 +53,10 @@ function ExpTable() {
         <div className={styles.expName}>
           <input className={styles.input} value={title} onChange={onChangeTitle} placeholder='활동명'/>
           <div className={styles.dropdown1}>
-            <DropList type={2} placeholder='활동에서 보여준 스킬 키워드'/>
+            <DropList type={2} placeholder={keyword1}/>
           </div>
           <div className={styles.dropdown2}>
-            <DropList type={1} placeholder='강점 키워드'/>
+            <DropList type={1} placeholder={keyword2}/>
           </div>
         </div>
         <div className={styles.expInfo}>

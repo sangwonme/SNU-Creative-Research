@@ -1,14 +1,19 @@
 import * as React from 'react';
 import styles from './AddDelBtn.module.scss';
 
-function AddDelBtn() {
+interface Props{
+  firstbtn: string,
+  secondbtn: string
+}
+
+function AddDelBtn({firstbtn, secondbtn}:Props) {
 
   return (
     <>
     <div className={styles.container}>
       <div className={styles.grid}>
-        <div className={styles.add}>활동 추가</div>
-        <div className={styles.del}>활동 삭제</div>
+        <div className={styles.add}>{firstbtn}</div>
+        <div className={styles.del}>{secondbtn}</div>
       </div>
     </div>
     </>

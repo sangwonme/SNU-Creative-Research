@@ -58,7 +58,7 @@
                 &:focus{
                     z-index: 2;
                     background-color: white;
-                    outline: #5696F4 solid;
+                    outline: #5696F4 solid 1px;
                 }
             }
             .dropdown1{
@@ -91,7 +91,7 @@
                 &:focus{
                     z-index: 2;
                     background-color: white;
-                    outline: #5696F4 solid;
+                    outline: #5696F4 solid 1px;
                 }
             }
             .lastInput{
@@ -106,7 +106,7 @@
                 &:focus{
                     z-index: 2;
                     background-color: white;
-                    outline: #5696F4 solid;
+                    outline: #5696F4 solid 1px;
                 }
             }
         }

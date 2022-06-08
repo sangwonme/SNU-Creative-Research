@@ -4,7 +4,7 @@ import styles from './Profile.module.scss';
 
 function Profile() {
   // keywords
-  const wantjobKey = ['마케터', 'PM', '디자이너'];
+  const wantjobKey = ['마케터', '기획자', '디자이너'];
   const interestKey = ['스포츠', '미디어', '게임'];
   const skillKey = ['산업리서치', '데이터 분석', 'Slack'];
 

@@ -21,7 +21,7 @@ function ExpCV({title}:Props) {
             <ExpTable key={num}/>
           )
         }
-        <AddDelBtn/>
+        <AddDelBtn firstbtn='활동 추가' secondbtn='활동 삭제'/>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './DropList.module.scss';
 
 interface Props{
@@ -21,9 +21,16 @@ function DropList({type, placeholder}: Props) {
     setKeyword(word);
   }
 
+  useEffect(() => {
+    setKeyword(placeholder);
+  }, [placeholder]
+  );
+
   const traitKeywords = ['능동적', '꼼꼼함', '성실함', '통찰력', '리더십', '소통능력', '문제 해결 능력'];
   const skillKeywords = ['1','2','3', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'];
-  const jobKeywords = ['PM', '마케터', '디자이너', '개발자'];
+  const jobKeywords = ['기획자', '마케터', '디자이너', '개발자'];
+  const langKeywords = ['TOEIC', 'TEPS', 'JLPT'];
+  const certKeywords = ['GTQ', '정보처리기사', '공인중개사'];
 
   return (
   <div className={styles.container}>
@@ -57,12 +64,30 @@ function DropList({type, placeholder}: Props) {
             >
             {word}
             </p>
+          ) : 
+          type == 4 ?
+          langKeywords.map((word) => 
+            <p 
+              className={styles.keyword}
+              onClick={() => updateKeyword(word)}
+            >
+            {word}
+            </p>
+          ) : 
+          type == 5 ?
+          certKeywords.map((word) => 
+            <p 
+              className={styles.keyword}
+              onClick={() => updateKeyword(word)}
+            >
+            {word}
+            </p>
           ) : null
         }
       </div>
     }
     <div className={styles.dropdown} onClick={toggleDrop}>
-      <p className={styles.selected} style={keyword!=placeholder ? {color: 'black'} : {}}>{keyword}</p>
+      <p className={styles.selected} style={{color: 'black'}}>{keyword}</p>
       <p className={styles.arrow}>{useDrop? '▲' : '▼'}</p>
     </div>
   </div>
