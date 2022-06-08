@@ -5,6 +5,7 @@
 
 input{
     padding-left: toRem(16);
+    font-size: toRem(13);
 }
 
 input:focus{
@@ -19,21 +20,21 @@ input:focus{
     border: 1px solid #D9D9D9;
     border-radius: 16px;
     .wrapper{
-        // size
-        padding: toRem(20);
         // center
         margin: 0 auto;
         .title{
             // margin
-            margin-top: 0;
+            margin-top: toRem(20);
             margin-bottom: toRem(20);
+            margin-left: toRem(20);
             // font
             font-size: toRem(16);
             font-weight: 600;
         }
         .infowrapper{
             // size
-            margin: 0 toRem(16);
+            margin: 0 toRem(20);
+            margin-bottom: toRem(20);
             .info{
                 // size
                 width: 100%;
