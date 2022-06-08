@@ -1,52 +1,19 @@
 import * as React from 'react';
 import { useState } from 'react';
+import DropList from '../../DropList/DropList';
 import styles from './ExpTable.module.scss';
 
 function ExpTable() {
-  // drop down list options
-  const options = [
-    'one', 'two', 'three'
-  ];
-  const defaultOption = options[0];
-
-  // keyword
-  const [useDrop, setUseDrop] = useState<boolean>(false);
-  const toggleDrop = () => {
-    setUseDrop(!useDrop);
-  }
-  const keywords = [
-    '겸손함', '성실', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'
-  ];
-
-  // update keyword
-  const [keyword, setKeyword] = useState<string>('활동에서 보여준 강점 키워드');
-  const updateKeyword = (word: string) => {
-    toggleDrop();
-    setKeyword(word);
-  }
   
   return (
     <>
     <div className={styles.container}>
       <div className={styles.grid}>
-        {
-          useDrop &&
-          <div className={styles.listBox}>
-            {
-              keywords.map((word) => 
-                <p 
-                  className={styles.keyword}
-                  onClick={() => updateKeyword(word)}
-                >
-                {word}
-                </p>
-              )
-            }
-          </div>
-        }
         <div className={styles.expName}>
           <input className={styles.input} placeholder='활동명'/>
-          <p className={styles.dropdown} onClick={toggleDrop}>{keyword}{useDrop? '▲' : '▼'}</p>
+          <div className={styles.tmp}>
+            <DropList type={1} placeholder='dkdk'/>
+          </div>
         </div>
         <div className={styles.expInfo}>
           <p className={styles.label}>활동 개요</p>

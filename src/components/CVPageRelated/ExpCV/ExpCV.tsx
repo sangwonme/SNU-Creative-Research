@@ -10,13 +10,7 @@ interface Props{
 
 function ExpCV({title}:Props) {
   // exp tables
-  const [exptables, setExptables] = useState<number[]>([0]);
-  const addTable = () => {
-    // console.log(exptables);
-    // setExptables([...exptables, 0]);
-    // console.log(exptables);
-    console.log('hi');
-  }
+  const exptables = [0];
 
   return (
     <div className={styles.container}>
@@ -27,7 +21,7 @@ function ExpCV({title}:Props) {
             <ExpTable key={num}/>
           )
         }
-        <AddDelBtn addPreseed={()=>addTable}/>
+        <AddDelBtn/>
       </div>
     </div>
   );

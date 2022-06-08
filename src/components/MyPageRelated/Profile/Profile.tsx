@@ -69,7 +69,7 @@ function Profile() {
 
         <div className={styles.contact}>
           <p className={styles.label}>이메일</p>
-          <p className={styles.address}>abcdefg@hijklm.com</p>
+          <p className={styles.address}>abcdefg@snu.ac.kr</p>
         </div>
 
       </div>

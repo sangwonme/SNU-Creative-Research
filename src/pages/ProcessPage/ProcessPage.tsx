@@ -29,9 +29,9 @@ function ProcessPage() {
   // step
   const [step, setStep] = useState<number>(3);
   const goNextStep = () => {
-    if (step < 4 && selection.length > 0){
-      setStep(step + 1);
-    }
+    // if (step < 4 && selection.length > 0){
+    //   setStep(step + 1);
+    // }
     console.log(step);
   }
 
