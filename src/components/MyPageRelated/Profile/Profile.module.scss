@@ -1,0 +1,89 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+.container{
+    // size
+    width: 80%;
+    // border
+    border: 1px #D9D9D9 solid;
+    border-radius: 16px;
+    .wrapper{
+        // size
+        padding: toRem(24);
+        // center
+        margin: 0 auto;
+        .profile{
+            // margin
+            margin-bottom: toRem(20);
+            // flex
+            display: flex;
+            align-items: center;
+            .name{
+                // font
+                font-size: toRem(32);
+                font-weight: 600;
+                color: #2679F1;
+                // margin
+                margin: 0;
+                margin-right: toRem(20);
+            }
+            .agesex{
+                // font
+                font-size: toRem(20);
+                color: #5B5C61;
+                margin: 0;
+            }
+        }
+        .school{
+            // margin
+            margin-bottom: toRem(20);
+            // font
+            font-size: toRem(20);
+            color: #5B5C61;
+            .snu{
+                margin: 0;
+                font-weight: 600;
+            }
+            .major{
+                margin: 0;
+            }
+        }
+        .keyword{
+            .category{
+                // margin
+                margin-bottom: toRem(20);
+                .label{
+                    // font
+                    font-size: toRem(16);
+                    font-weight: 600;
+                    color: #5B5C61;
+                    // margin
+                    margin: 0;
+                    margin-bottom: toRem(8);
+                }
+                .keywords{
+                    // flex
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+        .contact{
+            // flex
+            display: flex;
+            align-items: center;
+            // font
+            font-size: toRem(16);
+            color: #5B5C61;
+            .label{
+                // font
+                font-weight: 600;
+            }
+            .address{
+                margin-left: toRem(20);
+            }
+        }
+    }
+}

@@ -6,14 +6,21 @@
 .box{
     // size
     margin: 0;
+    margin-right: toRem(12);
+    margin-bottom: toRem(12);
     padding: 0;
+    width: fit-content;
     // style
     border: #D8D8D8 1px solid;
     background-color: #F8F8F8;
+    border-radius: 8px;
     .text{
+        // size
+        width: fit-content;
         // font
         font-size: toRem(16);
         color: #2679F1;
+        white-space: nowrap;
         // size
         margin: toRem(6) toRem(12);
     }
