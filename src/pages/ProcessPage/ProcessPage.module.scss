@@ -32,7 +32,15 @@
                     font-size: toRem(18);
                     color: #5B5C61;
                 }
+                .hover{
+                    cursor: pointer;
+                    &:hover{
+                        outline-color: #5696F4;
+                        outline-width: 1px;
+                    }
+                }
                 .companyWrapper{
+                    position: relative;
                     // size
                     width: 100%;
                     padding: toRem(20);
@@ -42,11 +50,74 @@
                     // border
                     outline: 1px solid #D9D9D9;
                     border-radius: 16px;
-                    // cursor
-                    cursor: pointer;
-                    &:hover{
-                        outline-color: #5696F4;
-                        outline-width: 1px;
+                    .progress{
+                        // position
+                        position: relative;
+                        // font
+                        font-size: toRem(16);
+                        // size 
+                        width: 100%;
+                        box-sizing: border-box;
+                        margin: 0;
+                        margin: toRem(20) 0;
+                        // flex
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .bar{
+                            // position
+                            position: absolute;
+                            top: 0;
+                            // size
+                            width: 100%;
+                            height: toRem(24);
+                            margin: 0 auto;
+                            // grid
+                            display: grid;
+                            grid-template-columns: toRem(76) 1fr toRem(76);
+                            .line{
+                                // size
+                                width: 100%;
+                                height: toRem(24);
+                                // border
+                                border-bottom: #D9D9D9 3px solid;
+                            }
+                        }
+                        .step{
+                            // size
+                            width: toRem(120);
+                            // flex
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            .firstcircle{
+                                // size
+                                width: toRem(48);
+                                height: toRem(48);
+                                border-radius: 50%;
+                                background-color: #3E88F2;
+                                // center
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                // zindex
+                                z-index: 2;
+                            }
+                            .firststepName{
+                                color: #3E88F2;
+                            }
+                            .circle{
+                                // size
+                                width: toRem(48);
+                                height: toRem(48);
+                                border-radius: 50%;
+                                background-color: #D9D9D9;
+                            }
+                            .stepName{
+                                color: #D9D9D9;
+                            }
+                        }
                     }
                 }
             }
