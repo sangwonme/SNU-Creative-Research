@@ -27,7 +27,7 @@ function DropList({type, placeholder}: Props) {
   );
 
   const traitKeywords = ['능동적', '꼼꼼함', '성실함', '통찰력', '리더십', '소통능력', '문제 해결 능력'];
-  const skillKeywords = ['1','2','3', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'];
+  const skillKeywords = ['데이터 분석', 'Slack', '사용자 리서치', '산업 리서치', 'React', 'Vue'];
   const jobKeywords = ['기획자', '마케터', '디자이너', '개발자'];
   const langKeywords = ['TOEIC', 'TEPS', 'JLPT'];
   const certKeywords = ['GTQ', '정보처리기사', '공인중개사'];

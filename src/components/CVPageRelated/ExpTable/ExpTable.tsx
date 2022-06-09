@@ -41,8 +41,8 @@ function ExpTable() {
     setDesc2(expList[expId-1].description[1]);
     setDesc3(expList[expId-1].description[2]);
     setDesc4(expList[expId-1].description[3]);
-    setKeyword1(expList[expId-1].keywords[0]);
-    setKeyword2(expList[expId-1].keywords[1]);
+    setKeyword1(expList[expId-1].keywords[1]);
+    setKeyword2(expList[expId-1].keywords[0]);
   }, [expId]
   );
 
